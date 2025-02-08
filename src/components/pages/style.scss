@@ -1,7 +1,6 @@
-// pages/style.scss
-.movie-details {
+.movie-details-page {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   color: #fff;
 
   .background-image {
@@ -13,27 +12,56 @@
     background-size: cover;
     background-position: center;
     z-index: -1;
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 
   .content {
     position: relative;
     z-index: 1;
-    padding: 24px;
-    background-color: rgba(0, 0, 0, 0.7);
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 8px;
-    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 16px;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     p {
-      font-size: 18px;
-      margin-bottom: 8px;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
     }
+
+    .overview{
+      width: 50%;
+    }
+
+    .btn-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .btn-default { 
+        width: 50%;
+        font-size: 1.1rem;
+        background-color: #6046ff;
+        padding: 6px 8px;
+        border-radius: 4px;
+        margin-top: 10px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        position:absolute;
+        bottom: 10%;
+      }
+    }
+
+    
   }
 }

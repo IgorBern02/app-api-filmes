@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Movie } from "../types/movie";
 import StarRating from "../Stars";
 
@@ -15,15 +16,10 @@ function MovieCard(props: Props) {
   // };
 
   return (
+    <Link to={`/movie/${movie.id}`}> 
     <li className="movie-card">
       <div className="movie-poster">
-        {/* <img
-          id="img"
-          src=
-          alt={movie.title}
-          width={200}
-          height={250}
-        /> */}
+
         <img
           src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
           alt={movie.title}
@@ -42,10 +38,14 @@ function MovieCard(props: Props) {
                 : movie.overview}
             </p>
           )}
-          <button className="btn-default">Ver mais</button>
+         
+            <button className="btn-default">Ver mais</button>
+         
+          
         </div>
       </div>
-    </li> // Renderiza os títulos dos filmes
+    </li> 
+    </Link>
   );
 }
 
