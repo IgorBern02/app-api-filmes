@@ -7,4 +7,5 @@ export interface Movie {
   backdrop_path: string;
   runtime: number;
   release_date: string;
+  pageNumber: string;
 }

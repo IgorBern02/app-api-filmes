@@ -1,38 +1,49 @@
-.loading-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 72px);
+// .loading-container {
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   min-height: calc(100vh - 72px);
+//   margin-top: 20px;
+// }
 
-}
-
-.movie-list {
-  padding: 24px 3%;
- 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 16px;
-  list-style: none;
+.movie-list-container {
   width: 100%;
+  height: 100%;
+  margin-top: 100px;
+
+  .movie-list {
+    padding: 24px 3%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+    list-style: none;
+    width: 100%;
+    height: auto;
+  }
 }
 
-.btn-more-container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px; // Adiciona um espaçamento acima do botão
-  margin-bottom: 20px; // Adiciona um espaçamento abaixo do botão
+.btn-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px; // Adiciona um espaçamento acima do botão
+  margin-bottom: 35px; // Adiciona um espaçamento abaixo do botão
 
-      .btn-more{
-        width: 50%;
-        font-size: 1.1rem;
-        background-color: #6046ff;
-        padding: 6px 8px;
-        border-radius: 4px;
-        margin-top: 10px;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-      }
+  .btn-more {
+    width: 50%;
+    font-size: 1.1rem;
+    background-color: #6046ff;
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      background-color: #4c30fe;
+    }
+  }
 }
-

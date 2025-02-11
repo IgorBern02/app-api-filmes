@@ -2,7 +2,12 @@
   width: 100%;
   height: auto;
   padding: 12px 3%;
-  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  // background-color: rgba(0, 0, 0, 0.5);
+  background: transparent;
+  backdrop-filter: blur(3px);
   color: #fff;
 
   .title_navbar {

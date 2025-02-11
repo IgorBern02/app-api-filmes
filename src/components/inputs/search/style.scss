@@ -1,0 +1,36 @@
+.input-search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  top: 80px;
+
+  input {
+    width: 30%;
+    padding: 8px 6px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  svg {
+    width: 30px;
+    height: 31px;
+    background-color: #6046ff;
+    padding: 2px;
+    position: relative;
+    right: 30px;
+    border-radius: 0px 5px 5px 0px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
