@@ -1,4 +1,3 @@
-import React from "react";
 import { useVisibility } from "../visibilityContext";
 import "./style.scss";
 
