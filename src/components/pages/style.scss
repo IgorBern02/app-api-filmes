@@ -1,3 +1,15 @@
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 577px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
 .movie-details-page {
   position: relative;
   // height: 100vh;
@@ -36,12 +48,51 @@
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-bottom: 0.5rem;
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
+
+      .content:has(.description) .overview {
+        height: 100px;
+      }
+
+      .content:not(:has(.description)) .overview {
+        height: 40px;
+      }
     }
 
     .overview {
       width: 50%;
+      height: auto;
+      text-align: left;
+
+      .btn-default {
+        width: 100%;
+        background-color: #6046ff;
+        padding: 6px 8px;
+        border-radius: 4px;
+        margin-top: 10px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: ease-in-out 0.2s;
+        font-size: 1.1rem;
+
+        &:hover {
+          background-color: #4c30fe;
+        }
+      }
+
+      @include mobile {
+        width: 80%;
+      }
+
+      @include tablet {
+        width: 90%;
+      }
     }
 
     .btn-container {

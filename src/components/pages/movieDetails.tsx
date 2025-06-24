@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useVisibility } from "../visibilityContext";
 import axios from "axios";
@@ -10,6 +10,25 @@ const MovieDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
   const [movie, setMovie] = useState<Movie | null>(null);
   const { setNavbarVisibility, setSearchVisibility } = useVisibility();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const toggleExpanded = () => {
+    setIsExpanded((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Define isMobile baseado na largura da janela
+    };
+
+    handleResize(); // Chama a função uma vez para definir o estado inicial
+    window.addEventListener("resize", handleResize); // Adiciona o listener de resize
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Limpa o listener ao desmontar o componente
+    };
+  }, []);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -61,11 +80,21 @@ const MovieDetailsPage = () => {
         </p>
         <p>{movie.runtime} minutos</p>
         <div className="overview">
-          <p>{movie.overview}</p>
+          {movie.overview.length > 300 && isMobile ? (
+            <p className="description">
+              {isExpanded
+                ? movie.overview
+                : `${movie.overview.substring(0, 150)}...`}
+              <button className="btn-default" onClick={toggleExpanded}>
+                {isExpanded ? "Ver menos" : "Ver mais"}
+              </button>
+            </p>
+          ) : (
+            <p>{movie.overview}</p>
+          )}
         </div>
 
         <Link to="/home" className="btn-container">
-          {/* <button className="btn-default">Voltar</button>  */}
           <button className="btn-default">
             <FaArrowLeft />
             <span className="btn-text">Voltar</span>

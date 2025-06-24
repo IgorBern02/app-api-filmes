@@ -29,13 +29,13 @@ export function SearchMovie() {
 
       if (response.data.results.length > 0) {
         const firstMovie = response.data.results[0];
-        navigate(`/movie/${firstMovie.id}`); // Redireciona para a página de detalhes do filme
+        navigate(`/movie/${firstMovie.id}`); // Redirecionar para a página de detalhes do filme
       } else {
-        setErrorMessage("Nenhum filme encontrado com esse nome."); // Define a mensagem de erro
+        setErrorMessage("Nenhum filme encontrado com esse nome."); // Mensagem de erro
       }
     } catch (error) {
       console.error("Erro ao buscar filme:", error);
-      setErrorMessage("Ocorreu um erro ao buscar o filme. Tente novamente."); // Define a mensagem de erro em caso de falha na requisição
+      setErrorMessage("Ocorreu um erro ao buscar o filme. Tente novamente."); // Mensagem de erro em caso de falha na requisição
     }
   };
 
