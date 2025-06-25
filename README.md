@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# 🎬 App API Filmes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de catálogo de filmes que consome a API do TMDb (The Movie Database). A aplicação exibe uma lista de filmes populares, permite visualizar os detalhes de cada filme e é responsiva para diferentes dispositivos.
 
-Currently, two official plugins are available:
+🔗 [Acesse o projeto aqui](https://igorbern02.github.io/app-api-filmes/#/home)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- Listagem de filmes populares
+- Página de detalhes com informações do filme
+- Sistema de busca por título
+- Responsividade (com comportamento exclusivo em mobile)
+- Navegação entre páginas com React Router
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📸 Preview
 
-- Configure the top-level `parserOptions` property like this:
+![preview-home](./public/preview-home.png)
+![preview-detalhes](./public/preview-details.png)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tecnologias utilizadas
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [Axios](https://axios-http.com/)
+- [SCSS](https://sass-lang.com/)
+
+## 📁 Estrutura de pastas
+
+```bash
+app-api-filmes/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── styles/
+│   ├── App.tsx
+│   └── main.tsx
+├── vite.config.ts
+└── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+🧠 Aprendizados
+Durante o desenvolvimento deste projeto, pratiquei:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Integração com APIs REST
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Gerenciamento de rotas com react-router-dom
+
+Criação de interfaces responsivas com SCSS
+
+Deploy com GitHub Pages
+
+🚀 Como rodar localmente
+1 - Clone o repositório:
+git clone https://github.com/IgorBern02/app-api-filmes.git
+cd app-api-filmes
+
+2 - Instale as dependências:
+npm install
+
+3 - Inicie o projeto:
+npm run dev
+
+4 - Acesse em: http://localhost:5173

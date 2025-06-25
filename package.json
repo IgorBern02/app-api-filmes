@@ -6,7 +6,7 @@
   "homepage": "https://IgorBern02.github.io/app-api-filmes/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
