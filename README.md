@@ -12,11 +12,6 @@ Este é um projeto de catálogo de filmes que consome a API do TMDb (The Movie D
 - Responsividade (com comportamento exclusivo em mobile)
 - Navegação entre páginas com React Router
 
-## 📸 Preview
-
-![preview-home](./public/preview-home.png)
-![preview-detalhes](./public/preview-details.png)
-
 ## 🛠️ Tecnologias utilizadas
 
 - [React](https://reactjs.org/)
