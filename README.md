@@ -54,13 +54,25 @@ Deploy com GitHub Pages
 
 🚀 Como rodar localmente
 1 - Clone o repositório:
+
+```bash
 git clone https://github.com/IgorBern02/app-api-filmes.git
 cd app-api-filmes
+```
 
 2 - Instale as dependências:
+
+```bash
 npm install
+```
 
 3 - Inicie o projeto:
+
+```bash
 npm run dev
+```
 
 4 - Acesse em: http://localhost:5173
+
+🤝 Quer contribuir?
+Fique à vontade para abrir PR, issues ou dar sugestões. Toda ajuda é bem-vinda, seja corrigindo bug, melhorando o layout ou otimizando o código. 🚀
